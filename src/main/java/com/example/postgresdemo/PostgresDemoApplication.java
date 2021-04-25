@@ -15,6 +15,11 @@ public class PostgresDemoApplication {
 		SpringApplication.run(PostgresDemoApplication.class, args);
 	}
 	
+	/**
+	 * Hibernate configuration with spring boot 
+	 * @param emf
+	 * @return SessionFactory
+	 */
 	@Bean
 	public SessionFactory sessionFactory(EntityManagerFactory emf) {
 	    return emf.unwrap(SessionFactory.class);
