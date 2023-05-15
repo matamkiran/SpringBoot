@@ -10,9 +10,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
 @EnableJpaAuditing
-public class PostgresDemoApplication {
+public class SpringBootRestAPIApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(PostgresDemoApplication.class, args);
+		SpringApplication.run(SpringBootRestAPIApplication.class, args);
 	}
 	
 	/**
@@ -20,7 +20,7 @@ public class PostgresDemoApplication {
 	 * @param emf
 	 * @return SessionFactory
 	 */
-	@Bean
+	@Bean	
 	public SessionFactory sessionFactory(EntityManagerFactory emf) {
 	    return emf.unwrap(SessionFactory.class);
 	}

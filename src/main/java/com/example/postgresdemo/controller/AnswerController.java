@@ -1,16 +1,32 @@
 package com.example.postgresdemo.controller;
 
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.example.postgresdemo.exception.ResourceNotFoundException;
 import com.example.postgresdemo.model.Answer;
 import com.example.postgresdemo.repository.AnswerRepository;
 import com.example.postgresdemo.repository.QuestionRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import javax.validation.Valid;
-import java.util.List;
-
+/**
+ * AnswerController.java
+ * @author matam
+ * @version 1.0.0
+ * This controller used for CRUD operations on Answers 
+ */
 @RestController
+@RequestMapping("/our")
 public class AnswerController {
 
     @Autowired

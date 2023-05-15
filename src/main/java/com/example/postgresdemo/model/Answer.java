@@ -5,6 +5,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "answers")
@@ -19,6 +20,7 @@ public class Answer extends AuditModel {
     private Long id;
 
     @Column(columnDefinition = "text")
+    @Size(min=5 ,max=2000)
     private String text;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
